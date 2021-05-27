@@ -7,7 +7,7 @@ function DefinitionCard({ searchResults }) {
         <ol className="definition-card">{/** searchResults reference an array of response objects */}
             {searchResults 
                 .map((wordObject) => (
-                    <li className="definition-list"><DefinitionList 
+                    <li className="definition-list" key={wordObject.meta.uuid}><DefinitionList 
                     key={wordObject.meta.id} 
                     wordObject={wordObject} /></li>
                 ))

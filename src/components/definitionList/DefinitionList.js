@@ -15,7 +15,7 @@ function DefinitionList({ wordObject }) {
                     <strong>stems: </strong><Stems wordObject={wordObject} />
                     <i><strong>short definition</strong></i>: <ShortDef wordObject={wordObject} />
                 </div> :
-                <div className="not-available">
+                <div className="not-available definition-div">
                     id: {wordObject.meta.id}<br></br>
                     headword: {wordObject.hwi.hw}<br></br>
                     stems: <Stems wordObject={wordObject} />
