@@ -1,12 +1,15 @@
 import React from 'react';
-import { v4 as uuidv4 } from "uuid";
+import "./Lines.css";
+//import { v4 as uuidv4 } from "uuid";
 
 function Lines({ lines }) {
     
     return (
         <div>
             {lines.map(line => (
-                <p>{line}</p>
+                line === ""?
+                <br></br> :
+                <p className="lines">{line}</p>
             ))} 
         </div>
     );

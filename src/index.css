@@ -3,5 +3,5 @@ body {
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: tomato;
+  background-color: rgb(43, 37, 37);
 }

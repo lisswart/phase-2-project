@@ -1,6 +1,33 @@
 .poem-titles {
-    background-color: antiquewhite;
+    background-color: rgb(43, 37, 37);
+    color: cornsilk;
     font-size: 16px;
     margin-left: 2em;
-    padding-left: 5em;
+    padding-left: 2em;
+}
+
+.poem-container {
+    box-sizing: border-box;
+    border: gold solid 1px;
+    margin-bottom: 2em;
+    margin-right: 4em;
+    margin-top: 3em;
+    padding-left: 4em;
+}
+
+.author {
+    padding-bottom: 2em;
+    padding-left: 2em;
+    background-color: rgb(43, 37, 37);
+}
+
+.title {
+    padding-left: 2em;
+    background-color: rgb(43, 37, 37);
+}
+
+.poetry-coll-heading {
+    display: flex;
+    justify-content: center;
+    color: cornsilk;
 }

@@ -1,0 +1,8 @@
+.lines {
+    margin-left: 2em;
+    background-color: rgb(43, 37, 37);
+}
+
+.lines:last-of-type {
+    padding-bottom: 4em;
+}

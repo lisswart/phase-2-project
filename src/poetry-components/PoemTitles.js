@@ -4,28 +4,28 @@ import Lines from "./Lines";
 
 function PoemTitles() {
     const [titles, setTitles] = React.useState([]);
-    const POETRY_DB_BASE_URL = "https://poetrydb.org/author/Edgar Allan Poe";
+    const POETRY_DB_BASE_URL = "https://poetrydb.org/author/Shakespeare";
 
     React.useEffect( () => {
         fetch(`${POETRY_DB_BASE_URL}`).then(r => r.json()).then(titleObjects => {
             console.log(titleObjects);
-            setTitles(titleObjects);
-            
+            setTitles(titleObjects);            
         });
     }, []);
 
-    //const lines = titles.map(title => title.lines);
-
     return (
-        <ol className="poem-titles">
+        <div>
+            <h1 className="poetry-coll-heading">Poetry Collection</h1>
+            <ol className="poem-titles">
                 {titles.map(title => (
-                    <li key={title}>
-                        <h3>{title.title}</h3>
-                        <h5>{title.author}</h5>
+                    <li className="poem-container" key={title}>
+                        <h2 className="title"><i>{title.title}</i></h2>
+                        <h3 className="author">{title.author}</h3>
                         <Lines lines={title.lines} />
                     </li>
                 ))}
             </ol>
+        </div>
     )
 }
 
