@@ -1,0 +1,4 @@
+.definition-card {
+    display: flex;
+    flex-wrap: wrap;
+}

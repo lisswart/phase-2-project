@@ -1,0 +1,16 @@
+.definition-list {
+    font-family: monospace;
+    font-size: 16px;
+    padding-bottom: 2em;
+    margin-left: 2em;
+    padding-right: 2em;
+    background-color: aliceblue;
+}
+
+.definition-list::marker {
+    list-style-position: inside;
+}
+
+.not-available {
+    color:red;
+}
