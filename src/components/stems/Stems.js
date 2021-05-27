@@ -6,7 +6,7 @@ function Stems({ wordObject }) {
     return (
         <ul>
             {stems.map(element => {
-                return <li key={element}>{element}</li>
+                return <li className={stems} key={element}>{element}</li>
             })}
         </ul>
     );     

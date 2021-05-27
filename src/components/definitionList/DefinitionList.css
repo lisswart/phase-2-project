@@ -1,14 +1,14 @@
-.definition-list {
+.definition-div {
     font-family: monospace;
     font-size: 16px;
     padding-bottom: 2em;
-    margin-left: 2em;
     padding-right: 2em;
-    background-color: aliceblue;
+    background-color: lemonchiffon;
 }
 
 .definition-list::marker {
     list-style-position: inside;
+    list-style: disc;
 }
 
 .not-available {

@@ -4,15 +4,15 @@ import "./DefinitionCard.css";
 function DefinitionCard({ searchResults }) {
     console.log(searchResults);
     return (
-        <ul className="definition-card">{/** searchResults reference an array of response objects */}
+        <ol className="definition-card">{/** searchResults reference an array of response objects */}
             {searchResults 
                 .map((wordObject) => (
-                    <DefinitionList 
-                    key={wordObject.meta.uuid} 
-                    wordObject={wordObject} />
+                    <li className="definition-list"><DefinitionList 
+                    key={wordObject.meta.id} 
+                    wordObject={wordObject} /></li>
                 ))
             } {/** extract desired string endpoints inside each iteration of the Array.map method */}
-        </ul>
+        </ol>
     );
 }
 

@@ -6,14 +6,14 @@ import ShortDef from '../shortDefinitions/ShortDef';
 function DefinitionList({ wordObject }) {
     
     return (
-        <li className="definition-list" key={wordObject.meta.uuid}>
+        <div key={wordObject.meta.uuid}>
             { (wordObject.shortdef).length !== 0 ?
-                <div>
-                    id: {wordObject.meta.id}<br></br>
-                    headword: {wordObject.hwi.hw}<br></br>
-                    functional label: {wordObject.fl}<br></br>
+                <div className="definition-div" >
+                    <strong>id: </strong>{wordObject.meta.id}<br></br>
+                    <strong>headword: </strong>{wordObject.hwi.hw}<br></br>
+                    <strong>functional label: </strong>{wordObject.fl}<br></br>
                     <strong>stems: </strong><Stems wordObject={wordObject} />
-                    <i>short definition</i>: <ShortDef wordObject={wordObject} />
+                    <i><strong>short definition</strong></i>: <ShortDef wordObject={wordObject} />
                 </div> :
                 <div className="not-available">
                     id: {wordObject.meta.id}<br></br>
@@ -22,7 +22,7 @@ function DefinitionList({ wordObject }) {
                     short definition not available
                 </div>
             }
-        </li>
+        </div>
     );
 }
 
