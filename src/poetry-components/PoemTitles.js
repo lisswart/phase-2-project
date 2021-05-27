@@ -1,6 +1,7 @@
 import React from 'react';
 import "./PoemTitles.css";
 import Lines from "./Lines";
+import {v4 as uuidv4} from "uuid";
 
 function PoemTitles() {
     const [titles, setTitles] = React.useState([]);
@@ -8,8 +9,7 @@ function PoemTitles() {
 
     React.useEffect( () => {
         fetch(`${POETRY_DB_BASE_URL}`).then(r => r.json()).then(titleObjects => {
-            console.log(titleObjects);
-            setTitles(titleObjects);            
+            setTitles(titleObjects);         
         });
     }, []);
 
@@ -17,11 +17,11 @@ function PoemTitles() {
         <div>
             <h1 className="poetry-coll-heading">Poetry Collection</h1>
             <ol className="poem-titles">
-                {titles.map(title => (
-                    <li className="poem-container" key={title}>
+                {titles.map((title, index) => (
+                    <li className={`poem-container ${title.title}`} key={index}>
                         <h2 className="title"><i>{title.title}</i></h2>
                         <h3 className="author">{title.author}</h3>
-                        <Lines lines={title.lines} />
+                        <Lines key={uuidv4()} lines={title.lines} title={title.title} />
                     </li>
                 ))}
             </ol>
