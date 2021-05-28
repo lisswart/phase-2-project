@@ -17,12 +17,12 @@
 
 .author {
     padding-bottom: 2em;
-    padding-left: 2em;
+    /* padding-left: 2em; */
     background-color: rgb(43, 37, 37);
 }
 
 .title {
-    padding-left: 2em;
+    /* padding-left: 2em; */
     background-color: rgb(43, 37, 37);
 }
 

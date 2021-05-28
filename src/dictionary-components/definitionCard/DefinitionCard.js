@@ -7,11 +7,11 @@ function DefinitionCard({ searchResults }) {
         <ol className="definition-card">{/** searchResults reference an array of response objects */}
             {searchResults 
                 .map((wordObject) => (
-                    <DefinitionList 
+                    <li className="definition-list" key={wordObject.meta.uuid}><DefinitionList 
                         className="definition-list"
                         key={wordObject.meta.id} 
                         wordObject={wordObject} 
-                    />
+                    /></li>
                 ))
             } {/** extract desired string endpoints inside each iteration of the Array.map method */}
         </ol>

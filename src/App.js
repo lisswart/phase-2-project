@@ -1,5 +1,5 @@
 import DisplayPanel from "./dictionary-components/displayPanel/DisplayPanel";
-import PoemTitles from "./poetry-components/PoemTitles";
+import PoemTitles from "./poetry-components/poemTitles/PoemTitles";
 import "./App.css";
 
 function App() {    
