@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./SearchFormPoetry.css";
 
 function SearchFormPoetry({ onLinesQuery, onPoemCountQuery }) {
     const [inputLines, setInputLines] = useState("");
@@ -22,9 +23,11 @@ function SearchFormPoetry({ onLinesQuery, onPoemCountQuery }) {
     }
 
     return (
-        <div>
+        <div className="poetry-search">
             <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleChangeLines} value={inputLines} name="lines" />
+                <label id="title-label" style={{color: 'cornsilk'}}>Enter words: </label>
+                <input type="text" onChange={handleChangeLines} value={inputLines} name="lines" /><br></br>
+                <label id="poem-count-label" style={{color: 'cornsilk'}}>Enter # of titles to display: </label>
                 <input type="text" onChange={handleChangePoemCount} value={poemCount} name="poemCount" />
                 <input type="submit" />
             </form>

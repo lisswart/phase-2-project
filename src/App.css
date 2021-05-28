@@ -5,9 +5,14 @@
 .app-heading {
     display: flex;
     justify-content: center;
-    color: cornsilk;
+    color: tomato;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: lavenderblush;
 }
 
 footer {
     color:honeydew;
+    display: flex;
+    justify-content: center;
 }
