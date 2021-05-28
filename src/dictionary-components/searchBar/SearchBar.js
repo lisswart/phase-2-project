@@ -5,7 +5,7 @@ function SearchBar({ onSubmitQuery }) {
     const [inputs, setInputs] = useState("");// store data that's entered into the input element
                                              // inputs state is updated with every keystroke
                                              // but since input state and query state are decoupled
-                                             // 
+                                             // fetch will not fire with every keystroke
     
     function handleSubmit(event) {
         event.preventDefault();

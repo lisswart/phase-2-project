@@ -31,3 +31,12 @@
     justify-content: center;
     color: cornsilk;
 }
+
+.click-title {
+    text-decoration: none;
+    color:bisque;
+}
+
+.click-title:hover {
+    color:coral;
+}
