@@ -27,7 +27,7 @@ function SearchBar({ onSubmitQuery }) {
     return (
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
-                <div><label style={{color: "cornsilk"}}>Enter search word: </label></div>
+                <label style={{color: "cornsilk"}}>Enter search word: </label>
                 <input type="text" onChange={handleChange} value={inputs} />
                 <input type="submit" />
             </form>

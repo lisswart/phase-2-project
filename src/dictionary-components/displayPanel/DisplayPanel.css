@@ -1,4 +1,6 @@
 .display-panel {
     background-color: rgba(43, 37, 37, 0.705);
     color: cornsilk;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
 }

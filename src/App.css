@@ -5,10 +5,10 @@
 .app-heading {
     display: flex;
     justify-content: center;
-    color: tomato;
+    color: mintcream;
     padding-top: 3em;
     padding-bottom: 3em;
-    background-color: lavenderblush;
+    background-color: lightcoral;
 }
 
 footer {
