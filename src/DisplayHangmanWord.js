@@ -11,7 +11,7 @@ function DisplayHangmanWord() {
     }, [time]);
 
     useEffect(() => {
-        const timerID = setInterval(() => {
+        setInterval(() => {
             setTime(new Date());
         }, 18e3);
         //return clearInterval(timerID);
