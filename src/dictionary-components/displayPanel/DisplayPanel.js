@@ -11,9 +11,12 @@ function DisplayPanel() {
     const LEARNER_DICTIONARY_BASE_URL = "https://www.dictionaryapi.com/api/v3/references/learners/json/";
     
     useEffect( () => {
-        fetch(`${LEARNER_DICTIONARY_BASE_URL}${query || "droll"}?key=${LEARNER_DICTIONARY_API_KEY}`)
+        fetch(`${LEARNER_DICTIONARY_BASE_URL}${query || "mere"}?key=${LEARNER_DICTIONARY_API_KEY}`)
             .then(r => r.json())
-            .then((wordData) => setSearchResults(wordData));// update search results based on user input query, 
+            .then((wordData) => {
+                setSearchResults(wordData);
+                console.log(wordData);
+            });// update search results based on user input query, 
                                                             // i.e., setting the state of search results after every data fetch,
                                                             // whenever we update the state, React calls our component
                                                             // each render "sees" its own 'searchResults' value,
